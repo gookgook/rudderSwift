@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myMessageCell" rowHeight="130" id="XnH-mq-f3g" customClass="MyMessageCell" customModule="Rudder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="504" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XnH-mq-f3g" id="Ilt-tT-7ae">
+                <rect key="frame" x="0.0" y="0.0" width="504" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-qF-SO0">
+                        <rect key="frame" x="450.5" y="10" width="38.5" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="vHS-88-OWq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVa-0z-tOQ">
+                        <rect key="frame" x="14" y="38" width="476" height="82"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent Mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-7T-Pbt">
+                        <rect key="frame" x="17" y="10" width="70" height="18"/>
+                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                        <color key="textColor" red="0.57647058823529407" green="0.16078431372549018" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wZ3-qF-SO0" secondAttribute="trailing" constant="15" id="19m-lh-esn"/>
+                    <constraint firstAttribute="bottom" secondItem="ZVa-0z-tOQ" secondAttribute="bottom" constant="10" id="DDO-hQ-fM3"/>
+                    <constraint firstItem="wZ3-qF-SO0" firstAttribute="top" secondItem="Ilt-tT-7ae" secondAttribute="top" constant="10" id="Eh2-M6-GgI"/>
+                    <constraint firstAttribute="trailing" secondItem="ZVa-0z-tOQ" secondAttribute="trailing" constant="14" id="Rnd-FI-6ws"/>
+                    <constraint firstItem="qi9-7T-Pbt" firstAttribute="top" secondItem="Ilt-tT-7ae" secondAttribute="top" constant="10" id="YIY-Kl-OOx"/>
+                    <constraint firstItem="ZVa-0z-tOQ" firstAttribute="leading" secondItem="Ilt-tT-7ae" secondAttribute="leading" constant="14" id="d7b-zq-EDE"/>
+                    <constraint firstItem="qi9-7T-Pbt" firstAttribute="leading" secondItem="Ilt-tT-7ae" secondAttribute="leading" constant="17" id="e0u-OG-TN2"/>
+                    <constraint firstItem="ZVa-0z-tOQ" firstAttribute="top" secondItem="wZ3-qF-SO0" secondAttribute="bottom" constant="10" id="fPv-Cc-rpY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="messageBodyView" destination="ZVa-0z-tOQ" id="K9T-Uw-hfi"/>
+                <outlet property="timeAgoLabel" destination="wZ3-qF-SO0" id="nO9-gR-tjw"/>
+            </connections>
+            <point key="canvasLocation" x="160.86956521739131" y="56.919642857142854"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

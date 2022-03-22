@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageTableCell" rowHeight="130" id="hy8-m0-hnP" customClass="MessageTableCell" customModule="Rudder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="504" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hy8-m0-hnP" id="HFW-GJ-wIB">
+                <rect key="frame" x="0.0" y="0.0" width="504" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5b-At-GAc">
+                        <rect key="frame" x="17" y="10" width="41" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="eZV-3D-0fy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPn-B3-3qU">
+                        <rect key="frame" x="450.5" y="13" width="38.5" height="18"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcE-Tm-8Xg">
+                        <rect key="frame" x="14" y="38" width="476" height="82"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="j5b-At-GAc" firstAttribute="leading" secondItem="HFW-GJ-wIB" secondAttribute="leading" constant="17" id="DXR-Nc-ILo"/>
+                    <constraint firstAttribute="trailing" secondItem="XcE-Tm-8Xg" secondAttribute="trailing" constant="14" id="EB8-Kf-x7f"/>
+                    <constraint firstAttribute="bottom" secondItem="XcE-Tm-8Xg" secondAttribute="bottom" constant="10" id="Ioz-Dx-zAy"/>
+                    <constraint firstAttribute="trailing" secondItem="CPn-B3-3qU" secondAttribute="trailing" constant="15" id="N86-Fc-gPc"/>
+                    <constraint firstItem="XcE-Tm-8Xg" firstAttribute="leading" secondItem="HFW-GJ-wIB" secondAttribute="leading" constant="14" id="OSL-es-r53"/>
+                    <constraint firstItem="XcE-Tm-8Xg" firstAttribute="top" secondItem="j5b-At-GAc" secondAttribute="bottom" constant="10" id="YWd-SV-8iM"/>
+                    <constraint firstItem="j5b-At-GAc" firstAttribute="top" secondItem="HFW-GJ-wIB" secondAttribute="top" constant="10" id="owz-p1-BGg"/>
+                    <constraint firstItem="CPn-B3-3qU" firstAttribute="top" secondItem="HFW-GJ-wIB" secondAttribute="top" constant="13" id="udK-KP-QQL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="messageBodyView" destination="XcE-Tm-8Xg" id="j3U-go-yYb"/>
+                <outlet property="timeAgoLabel" destination="CPn-B3-3qU" id="BuA-jR-sDK"/>
+                <outlet property="userIdLabel" destination="j5b-At-GAc" id="PLo-FJ-4pg"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="-154.6875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
